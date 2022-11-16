@@ -56,6 +56,8 @@ function SideDrawer() {
     history.push("/");
   };
 
+  // ---------------- Search Box -----------------
+
   const handleSearch = async () => {
     if (!search) {
       toast({

@@ -63,7 +63,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         title: "Error Occured!",
         description: "Failed to Load the Messages",
         status: "error",
-        duration: 100,
+        duration: 50,
         isClosable: true,
         position: "bottom",
       });
@@ -96,7 +96,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           title: "Error Occured!",
           description: "Failed to send the Message",
           status: "error",
-          duration: 300,
+          duration: 50,
           isClosable: true,
           position: "bottom",
         });

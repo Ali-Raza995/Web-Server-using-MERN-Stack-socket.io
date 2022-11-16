@@ -77,11 +77,15 @@ const fetchChats = asyncHandler(async (req, res) => {
 //@description     Create New Group Chat
 //@route           POST /api/chat/group
 //@access          Protected
+
+// ----------------- Create Group Chat ----------------------
+
 const createGroupChat = asyncHandler(async (req, res) => {
   if (!req.body.users || !req.body.name) {
     return res.status(400).send({ message: "Please Fill all the feilds" });
   }
 
+  // --------------- Error Show when user try to make group with only 1 --------
   var users = JSON.parse(req.body.users);
 
   if (users.length < 2) {
@@ -114,6 +118,9 @@ const createGroupChat = asyncHandler(async (req, res) => {
 // @desc    Rename Group
 // @route   PUT /api/chat/rename
 // @access  Protected
+
+// -------------- Renaiming Group ----------------
+
 const renameGroup = asyncHandler(async (req, res) => {
   const { chatId, chatName } = req.body;
 

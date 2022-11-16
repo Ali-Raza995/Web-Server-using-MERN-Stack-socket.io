@@ -10,6 +10,9 @@ const generateToken = require("../config/generateToken");
 
 // express-async-handler" will deal all errors automatically -------------
 
+
+// ----------- Searching Functionality -----------------
+
 const allUsers = asyncHandler(async (req, res) => {
   const keyword = req.query.search
     ? {
@@ -22,6 +25,7 @@ const allUsers = asyncHandler(async (req, res) => {
 
     // ------------------ User is model we created in models folder -----------------------
 
+    // ----------------- Accept this user that is already signed return all other ------------
   const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
   res.send(users);
 });

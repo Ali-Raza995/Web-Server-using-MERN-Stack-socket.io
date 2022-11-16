@@ -15,9 +15,8 @@ const app = express();
 
 app.use(express.json()); // to accept json data
 
-// app.get("/", (req, res) => {
-//   res.send("API Running!");
-// });
+
+// --------------- End Point For User  Chats and Messages --------
 
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
@@ -56,6 +55,8 @@ const server = app.listen(
   PORT,
   console.log(`Server running on PORT ${PORT}...`.yellow.bold)
 );
+
+// ------------------- Socket Io ------------------------
 
 const io = require("socket.io")(server, {
   pingTimeout: 60000,

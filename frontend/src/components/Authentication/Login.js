@@ -30,7 +30,7 @@ const Login = () => {
       toast({
         title: "Please Fill all the Feilds",
         status: "warning",
-        duration: 300,
+        duration: 100,
         isClosable: true,
         position: "bottom",
       });
@@ -56,19 +56,20 @@ const Login = () => {
       toast({
         title: "Login Successful",
         status: "success",
-        duration: 300,
+        duration: 100,
         isClosable: true,
         position: "bottom",
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      history.push("/chats");
+      history.push("Hello World")
+      // history.push("/chats");
     } catch (error) {
       toast({
         title: "Error Occured!",
         description: error.response.data.message,
         status: "error",
-        duration: 300,
+        duration: 100,
         isClosable: true,
         position: "bottom",
       });
