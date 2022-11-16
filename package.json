@@ -6,10 +6,10 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix fronted"
+    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix fronted",
   },
   "engines": {
-    "node": "16.18.0",
+    "node": "16.x",
     "npm": "8.19.2"
   },
   "keywords": [

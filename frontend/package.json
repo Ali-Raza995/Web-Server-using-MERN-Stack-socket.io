@@ -37,9 +37,9 @@
       "react-app/jest"
     ]
   },
-  "engines": {
-    "node": "16.18.0",
-    "npm": "8.19.2"
+    "engines": {
+    "node": "16.x",
+    "npm": "8.5.5"
   },
   "browserslist": {
     "production": [
